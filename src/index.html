@@ -7,10 +7,10 @@
 
 <body>
     <div class="container">
-        <img src="../static/images/pexels-scott-webb-1029624.jpg" alt="" class="header-image">
+        <img src="../static/images/webb.png" alt="" class="header-image">
         <header class="header">
             <div class="header-content">
-                <h1>Adriaan van Wyk</h1>  
+                <h1>Adriaan van Wyk</h1>
                 <h2>Software Engineer</h2>
                 <p class="description">
                     Currently working with <strong>Bank of America</strong> 
@@ -20,28 +20,43 @@
     
         <div class="sidebar">
             <nav>
-                <button type="button">Projects</button>
-                <button type="button">About Me</button>
-                <button type="button">Experience</button>
-                <button type="button">Contact</button>
-                <button type="button">Skills</button>
+                <button type="button" id='project-button' onclick="changePanel('projects')">Projects</button>
+                <button type="button" id='about-me-button' onclick="changePanel('about-me')">About Me</button>
+                <button type="button" id="contact-button" onclick="changePanel('contact')">Contact</button>
+                <button type="button" id="skills-button" onclick="changePanel('skills')">Skills</button>
+                <div class='nav-filling'></div>
             </nav>
         </div>
     
         <div class="main-content">
             <div class="content">
                 <div class="projects">
-                    Projects
+                    <div class="project-panel"></div>
+                    <div class="project-panel"></div>
+                    <div class="project-panel"></div>
+                    <div class="project-panel"></div>
                 </div>
 
 
                 <div class="about-me">
-                    About Me
-                </div>
-
-                
-                <div class="experience">
-                    Experience
+                    Ffoihwefoiwjefoijwefdoiwjefoiwjef
+                    aweofijaweofijawoeifjawoeifjaosiejf
+                    awespofijaweofijawoefuhaoweijfaoisejf
+                    aspoefijawoeifhasoeifjasoidjfaowiefj
+                    aepofhaesofihasdiofj;lkrfjaporgnboijfoaiwej
+                    afapoeifaopweuhfaoisefn;aoisejfoaisejf;ioj
+                    Ffoihwefoiwjefoijwefdoiwjefoiwjef
+                    aweofijaweofijawoeifjawoeifjaosiejf
+                    awespofijaweofijawoefuhaoweijfaoisejf
+                    aspoefijawoeifhasoeifjasoidjfaowiefj
+                    aepofhaesofihasdiofj;lkrfjaporgnboijfoaiwej
+                    afapoeifaopweuhfaoisefn;aoisejfoaisejf;ioj
+                    Ffoihwefoiwjefoijwefdoiwjefoiwjef
+                    aweofijaweofijawoeifjawoeifjaosiejf
+                    awespofijaweofijawoefuhaoweijfaoisejf
+                    aspoefijawoeifhasoeifjasoidjfaowiefj
+                    aepofhaesofihasdiofj;lkrfjaporgnboijfoaiwej
+                    afapoeifaopweuhfaoisefn;aoisejfoaisejf;ioj
                 </div>
 
 
@@ -56,6 +71,11 @@
             </div>
         </div>
 
+        <div class="right-sidebar">
+        </div>
+
     </div>
 
 </body>
+
+<script src="./mainContentPanelChange.js"></script>

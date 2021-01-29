@@ -7,11 +7,16 @@
     src: url('../static/fonts/DUBIEL.TTF');
 }
 
+@font-face {
+    font-family: 'JosefinSans';
+    src: url('../static/fonts/josefin_sans/JosefinSans-Regular.ttf')
+}
+
 :root {
-    --header-background-color: rgba(247, 247, 247, 0.589);
+    --header-background-color: rgba(255, 255, 255, 0.788);
     --nav-button-background-color: rgb(48, 48, 48);
     --main-page-background-color: rgba(255, 255, 255, 0.651);
-    --accent-color: #8ac5bd;
+    --accent-color: #5da091; 
     
 }
 
@@ -30,7 +35,7 @@ body {
     height: 100%;
     display: grid;
     grid-template-areas:    'header header header header header'
-                            'sidebar content content content content';
+                            'left-sidebar content content content right-sidebar';
     grid-template-columns: repeat(5, 20%);
     grid-template-rows: 100vh 100%;
     margin: 0;
@@ -49,13 +54,23 @@ body {
     padding: 0;
     background-color: var(--header-background-color);
 }
-
+/*
 .header-image {
     position: fixed;
     width: 100%;
     height: 100vh;
     z-index: -2;
     filter: grayscale();
+}
+*/
+.header-image {
+    position: fixed;
+    background-image: url('../static/images/webb.png');
+    background-repeat: repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -2;
 }
 
 .header-content {
@@ -66,6 +81,8 @@ body {
 .header h1 {
     flex-grow: 1;
     font-size: 4.5rem;
+    padding-bottom: 5%;
+    border-bottom: 1px solid rgb(189, 189, 189);;
 }
 
 .header h2 {
@@ -76,20 +93,19 @@ body {
 
 .header .description {
     font-size: 2em;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'JosefinSans';
 }
 
 
 .sidebar {
-    grid-area: sidebar;
+    grid-area: left-sidebar;
     background-color: var(--main-page-background-color);
 }
 
 nav {
     display: flex;
     flex-direction: column;
-    height: 50%;
-    margin-left: 5%;
+    height: 100%;
 }
 
 nav button {
@@ -100,6 +116,15 @@ nav button {
     color: white;
     border-bottom: 1px solid white;
     flex-grow: 1;
+}
+
+.nav-filling {
+    width: 120px;
+    font-size: 1.2em;
+    background-color: var(--nav-button-background-color);
+    color: white;
+    border-bottom: 1px solid white;
+    flex-grow: 4;
 }
 
 nav button:hover {
@@ -114,47 +139,38 @@ nav button:hover {
 }
 
 .content {
+    
     grid-area: content;
     padding: 0;
+    margin-top: 15%;
     background-color: var(--main-page-background-color);
     overflow: hidden;
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
-    height: 50vh;
+    height: 60vh;
 }
 
 .content > div {
     padding: 10px;
-    border: 1px solid red;
-    height: 50vh;
+    height: 60vh;
     flex-shrink: 0;
 }
 
 .content .projects {
-    color: red;
     order: 5;
     
 }
 
 .content .about-me {
-    color: blue;
-    order: 1;
-
-}
-
-.content .experience {
-    color: green;
     order: 5;
+
 }
 
 .content .contact {
-    color: purple;
     order: 5;
 }
 
 .content .skills {
-    color: darkorange;
     order: 5;
 }
 
