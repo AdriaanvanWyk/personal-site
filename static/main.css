@@ -2,11 +2,17 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "dubiel";
+    src: url('../static/fonts/DUBIEL.TTF');
+}
+
 :root {
-    --header-background-color: rgb(252, 166, 38);
+    --header-background-color: rgba(247, 247, 247, 0.589);
     --nav-button-background-color: rgb(48, 48, 48);
-    --main-page-background-color: rgb(0, 0, 0);
-    --accent-color: #ffffff;
+    --main-page-background-color: rgba(255, 255, 255, 0.651);
+    --accent-color: #8ac5bd;
+    
 }
 
 html {
@@ -27,36 +33,55 @@ body {
                             'sidebar content content content content';
     grid-template-columns: repeat(5, 20%);
     grid-template-rows: 100vh 100%;
-    
+    margin: 0;
+    padding: 0;
 }
 
 .header {
     grid-area: header;
-    color: rgb(255, 230, 230);
-    padding-left: 100px;
+    color: rgb(136, 135, 135);
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'dubiel';
+    z-index: -2;
+    margin: 0;
+    padding: 0;
     background-color: var(--header-background-color);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header-image {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -2;
+    filter: grayscale();
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
 }
 
 .header h1 {
     flex-grow: 1;
+    font-size: 4.5rem;
 }
 
 .header h2 {
     flex-grow: 1;
+    font-size: 3rem;
+    color: var(--accent-color);
 }
+
+.header .description {
+    font-size: 2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 
 .sidebar {
     grid-area: sidebar;
-    background-color: var(--main-page-background-color);
-}
-
-.content {
-    grid-area: content;
-    padding: 10px;
     background-color: var(--main-page-background-color);
 }
 
@@ -78,16 +103,59 @@ nav button {
 }
 
 nav button:hover {
-    color: rgb(255, 255, 255);
-    background-color: rgb(177, 59, 118);
+    color: rgb(40, 85, 71);
+    background-color: var(--accent-color);
 }
 
-.main_content_background {
-    position: fixed;
-    height: auto;
-    width: 100%;
-    z-index: -1;
-    filter: grayscale();
+.main-content {
+    grid-area: content;
+    height: 100%;
+    background-color: var(--main-page-background-color);
+}
+
+.content {
+    grid-area: content;
+    padding: 0;
+    background-color: var(--main-page-background-color);
+    overflow: hidden;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+}
+
+.content > div {
+    padding: 10px;
+    border: 1px solid red;
+    height: 50vh;
+    flex-shrink: 0;
+}
+
+.content .projects {
+    color: red;
+    order: 5;
+    
+}
+
+.content .about-me {
+    color: blue;
+    order: 1;
+
+}
+
+.content .experience {
+    color: green;
+    order: 5;
+}
+
+.content .contact {
+    color: purple;
+    order: 5;
+}
+
+.content .skills {
+    color: darkorange;
+    order: 5;
 }
 
 @media screen and (max-width: 700px) {
