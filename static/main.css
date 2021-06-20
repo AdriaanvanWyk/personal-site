@@ -13,11 +13,9 @@
 }
 
 :root {
-    --header-background-color: rgba(255, 255, 255, 0.788);
-    --nav-button-background-color: rgb(48, 48, 48);
+    --navigation-background: #353535;
     --main-page-background-color: rgba(255, 255, 255, 0.651);
-    --accent-color: #5da091; 
-    
+    --accent-color: #33cc80; 
 }
 
 html {
@@ -34,144 +32,104 @@ body {
     
     height: 100%;
     display: grid;
-    grid-template-areas:    'header header header header header'
+    grid-template-areas:    
+                            'nav nav nav nav nav'
                             'left-sidebar content content content right-sidebar';
     grid-template-columns: repeat(5, 20%);
-    grid-template-rows: 100vh 100%;
+    grid-template-rows: 70px 1fr;
     margin: 0;
     padding: 0;
-}
-
-.header {
-    grid-area: header;
-    color: rgb(136, 135, 135);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'dubiel';
-    z-index: -2;
-    margin: 0;
-    padding: 0;
-    background-color: var(--header-background-color);
-}
-/*
-.header-image {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    z-index: -2;
-    filter: grayscale();
-}
-*/
-.header-image {
-    position: fixed;
-    background-image: url('../static/images/webb.png');
-    background-repeat: repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    z-index: -2;
-}
-
-.header-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.header h1 {
-    flex-grow: 1;
-    font-size: 4.5rem;
-    padding-bottom: 5%;
-    border-bottom: 1px solid rgb(189, 189, 189);;
-}
-
-.header h2 {
-    flex-grow: 1;
-    font-size: 3rem;
-    color: var(--accent-color);
-}
-
-.header .description {
-    font-size: 2em;
-    font-family: 'JosefinSans';
-}
-
-
-.sidebar {
-    grid-area: left-sidebar;
-    background-color: var(--main-page-background-color);
 }
 
 nav {
+    grid-area: nav;
     display: flex;
-    flex-direction: column;
+    background-color: var(--navigation-background);
+    flex-direction: row;
+    height: 70px;
+    width: 100%;
+}
+
+#nav-link-buttons {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+}
+
+#nav-link-buttons button {
+    border-left: 1px #494949 solid;
+    flex-grow: 1;
+}
+
+nav img {
     height: 100%;
+    padding: 10px;
 }
 
 nav button {
     border: none;
     width: 120px;
     font-size: 1.2em;
-    background-color: var(--nav-button-background-color);
+    background-color: var(--navigation-background);
     color: white;
-    border-bottom: 1px solid white;
-    flex-grow: 1;
-}
-
-.nav-filling {
-    width: 120px;
-    font-size: 1.2em;
-    background-color: var(--nav-button-background-color);
-    color: white;
-    border-bottom: 1px solid white;
-    flex-grow: 4;
 }
 
 nav button:hover {
-    color: rgb(40, 85, 71);
+    color: rgb(0, 0, 0);
     background-color: var(--accent-color);
 }
 
+
 .main-content {
-    grid-area: content;
-    height: 100%;
-    background-color: var(--main-page-background-color);
-}
-
-.content {
-    
-    grid-area: content;
-    padding: 0;
-    margin-top: 15%;
-    background-color: var(--main-page-background-color);
+    width: 100vw;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    height: 60vh;
+    display: grid;
+    grid-template-areas: "left main right";
+    grid-template-columns: 10% 80% 10%;
 }
 
-.content > div {
-    padding: 10px;
-    height: 60vh;
-    flex-shrink: 0;
-}
 
-.content .projects {
-    order: 5;
+.main-content .projects {
+    grid-area: main;
+    position: relative;
+    left: 100vw;
+    background-color: yellow;
+    transition:left 0.2s linear;
     
 }
 
-.content .about-me {
-    order: 5;
+.main-content .about-me {
+    grid-area: main;
+    position: relative;
+    left: 100vw;
+    background-color: rgb(54, 232, 238);
+    transition:left 0.2s linear;
 
 }
 
-.content .contact {
-    order: 5;
+.main-content .home {
+    grid-area: main;
+    position: relative;
+    left: 100vw;
+    background-color: rgb(255, 27, 65);
+    transition:left 0.2s linear;
 }
 
-.content .skills {
-    order: 5;
+.main-content .skills {
+    position: relative;
+    left: 100vw;
+    grid-area: main;
+    background-color: rgb(43, 255, 0);
+    transition: position;
+    transition:left 0.2s linear;
+}
+
+
+
+.in-focus {
+    position: relative;
+    left: 0 !important;
 }
 
 @media screen and (max-width: 700px) {

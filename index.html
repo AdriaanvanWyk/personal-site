@@ -7,34 +7,37 @@
 
 <body>
     <div class="container">
-        <img src="../static/images/webb.png" alt="" class="header-image">
-        <header class="header">
-            <div class="header-content">
-                <h1>Adriaan van Wyk</h1>
-                <h2>Software Engineer</h2>
-                <p class="description">
-                    Currently working with <strong>Bank of America</strong> 
-                </p>
-            </div>
-        </header>
-    
-        <div class="sidebar">
-            <nav>
+        <nav>   
+            <button type="button" id='project-button' onclick="changePanel('home')"><img src="../static/images/icons8-home-192.png"></button>
+            <div id="nav-link-buttons">
                 <button type="button" id='project-button' onclick="changePanel('projects')">Projects</button>
                 <button type="button" id='about-me-button' onclick="changePanel('about-me')">About Me</button>
-                <button type="button" id="contact-button" onclick="changePanel('contact')">Contact</button>
                 <button type="button" id="skills-button" onclick="changePanel('skills')">Skills</button>
-                <div class='nav-filling'></div>
-            </nav>
-        </div>
-    
+            </div>
+            
+        </nav>
+        
         <div class="main-content">
-            <div class="content">
                 <div class="projects">
                     <div class="project-panel"></div>
                     <div class="project-panel"></div>
                     <div class="project-panel"></div>
                     <div class="project-panel"></div>
+                </div>
+
+                <div class="home">
+                        <img src='../static/images/headshot.jpg'>
+                        <h1>Adriaan van Wyk</h1>
+                        <h2>Software Engineer</h2>
+                        <p class="description">
+                            Currently working as a Software Engineer with <strong>Bank of America</strong> 
+                        </p>
+                        <div class="contact-info">
+                            <img src="../static/images/email.png">
+                            <p>adriaanvanwyk93@gmail.com</p>
+                            <img src="../static/images/linkedin-logo.png">
+                            <p>LinkedIn </p>
+                        </div>
                 </div>
 
 
@@ -58,20 +61,10 @@
                     aepofhaesofihasdiofj;lkrfjaporgnboijfoaiwej
                     afapoeifaopweuhfaoisefn;aoisejfoaisejf;ioj
                 </div>
-
-
-                <div class="contact">
-                    Contatct
-                </div>
-
-
+                
                 <div class="skills">
                     Skills
                 </div>
-            </div>
-        </div>
-
-        <div class="right-sidebar">
         </div>
 
     </div>

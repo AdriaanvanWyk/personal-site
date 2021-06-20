@@ -5,10 +5,10 @@ changePanel = targetPanelName => {
     
     if(CURRENT_PANEL_NAME !== targetPanelName) {
         const targetPanel = document.querySelector(`.${targetPanelName}`);
-        targetPanel.style.order = 1
+        targetPanel.classList.add('in-focus')
     
         const currentPanel = document.querySelector(`.${CURRENT_PANEL_NAME}`);
-        currentPanel.style.order = 5
+        currentPanel.classList.remove('in-focus')
     
         CURRENT_PANEL_NAME = targetPanelName;
     }
