@@ -1,6 +1,6 @@
 
 
-var CURRENT_PANEL_NAME = 'about-me'
+var CURRENT_PANEL_NAME = 'home'
 changePanel = targetPanelName => {
     
     if(CURRENT_PANEL_NAME !== targetPanelName) {
