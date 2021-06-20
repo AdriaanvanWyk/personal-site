@@ -17,6 +17,8 @@
     --main-page-background-color: rgba(255, 255, 255, 0.651);
     --accent-color: #33cc80; 
     --main-font: #3a3a3a;
+    --active-link: #494949;
+    --border-bottom-size: 5px;
 }
 
 html {
@@ -59,7 +61,6 @@ nav {
 }
 
 #nav-link-buttons button {
-    border-left: 1px #494949 solid;
     flex-grow: 1;
 }
 
@@ -73,12 +74,20 @@ nav button {
     width: 120px;
     font-size: 1.2em;
     background-color: var(--navigation-background);
+    border-top: var(--border-bottom-size) solid var(--navigation-background);
+    border-bottom: var(--border-bottom-size) solid var(--navigation-background);
     color: white;
 }
 
 nav button:hover {
     color: rgb(0, 0, 0);
     background-color: var(--accent-color);
+    border-top: var(--border-bottom-size) solid var(--accent-color);
+    border-bottom: var(--border-bottom-size) solid var(--accent-color);
+}
+
+.with-background-link {
+    border-bottom: var(--border-bottom-size) solid var(--accent-color);
 }
 
 
