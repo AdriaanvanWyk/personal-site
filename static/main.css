@@ -81,6 +81,10 @@ nav button {
 
 @media screen and (max-width: 800px) {
     
+    nav img {
+        height: 80%;
+    }
+
     #nav-link-buttons {
         width: 100%;
     }
