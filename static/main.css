@@ -72,11 +72,32 @@ nav img {
 nav button {
     border: none;
     width: 120px;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     background-color: var(--navigation-background);
     border-top: var(--border-bottom-size) solid var(--navigation-background);
     border-bottom: var(--border-bottom-size) solid var(--navigation-background);
     color: white;
+}
+
+@media screen and (max-width: 800px) {
+    
+    #nav-link-buttons {
+        width: 100%;
+    }
+
+    nav button {
+        width: 25%;
+        font-size: 1rem;
+    }
+
+    .container {
+
+        grid-template-areas:    
+        'left-sidebar content content content right-sidebar'
+        'nav nav nav nav nav';
+        grid-template-columns: repeat(5, 20%);
+        grid-template-rows: 1fr 70px;
+    }
 }
 
 nav button:hover {
@@ -85,6 +106,8 @@ nav button:hover {
     border-top: var(--border-bottom-size) solid var(--accent-color);
     border-bottom: var(--border-bottom-size) solid var(--accent-color);
 }
+
+
 
 .with-background-link {
     border-bottom: var(--border-bottom-size) solid var(--accent-color);
@@ -98,6 +121,13 @@ nav button:hover {
     grid-template-areas: "left main right";
     grid-template-columns: 10% 80% 10%;
     color: var(--main-font);
+}
+
+@media screen and (max-width: 800px) {
+    
+    .main-content {
+        grid-template-columns: 0% 100% 0%;
+    }
 }
 
 /* ================= HOME ================= */
@@ -200,12 +230,6 @@ nav button:hover {
 }
 
 @media screen and (max-width: 700px) {
-    nav button {
-        margin: 10px;
-        height: 70px;
-        width: 70px;
-        font-size: 0.8em;
 
-    }
 
 }
