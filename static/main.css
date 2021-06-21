@@ -148,16 +148,18 @@ nav button:hover {
 }
 
 .home h1 {
+    grid-area: name;
     font-size: 4.5rem;
 }
 
 .home h2 {
+    grid-area: title;
     font-size: 2rem;
 }
 
 .home .description {
     grid-area: description;
-    font-size: 2em;
+    font-size: 2rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-family: 'JosefinSans';
 }
@@ -185,11 +187,63 @@ nav button:hover {
     
 }
 
+.email-info {
+    display: flex;
+    align-items: center;
+}
+
 .home .contact-info {
     grid-area: contact;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+    
+    .main-content .home {
+        grid-template-areas: "img img"
+        "name name"
+        "title title"
+        "description description"
+        "contact contact";
+        width: 100%;
+
+        grid-template-columns: 1fr 1fr;
+        padding: 10px;
+    }
+
+    .home > img {
+        border-radius: 50%; 
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+    }
+
+    .home h1 {
+        font-size: 2rem;
+    }
+    
+    .home h2 {
+        font-size: 1rem;
+    }
+
+    .home .description {
+        font-size: 1rem;
+    }
+
+    .linkedin-link {
+        padding-left: 0;      
+    }
+
+    .home .contact-info {
+        flex-direction: column;
+    }
+
+    .home .contact-info img {
+        width: 25px;
+        height: 25px;
+    }
 }
 
 
