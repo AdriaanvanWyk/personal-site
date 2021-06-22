@@ -12,6 +12,11 @@
     src: url('../static/fonts/josefin_sans/JosefinSans-Regular.ttf')
 }
 
+@font-face {
+    font-family: "dayrom";
+    src: url('../static/fonts/roboto/Roboto-Regular.ttf');
+}
+
 :root {
     --navigation-background: #353535;
     --main-page-background-color: rgba(255, 255, 255, 0.651);
@@ -24,6 +29,7 @@
 html {
     margin: 0;
     height: 100%;
+    font-family: "dayrom";
 }
 
 body {
@@ -43,6 +49,8 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* ================ NAVIGATION ===================== */
 
 nav {
     grid-area: nav;
@@ -183,7 +191,7 @@ nav button:hover {
 }
 
 .linkedin-link {
-    padding-left: 250px;
+    margin-left: 250px;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -253,20 +261,12 @@ nav button:hover {
 
 
 
-.main-content .projects {
-    grid-area: main;
-    position: relative;
-    left: 100vw;
-    background-color: yellow;
-    transition:left 0.2s linear;
-    
-}
+
 
 .main-content .about-me {
     grid-area: main;
     position: relative;
     left: 100vw;
-    background-color: rgb(54, 232, 238);
     transition:left 0.2s linear;
 
 }
@@ -275,10 +275,66 @@ nav button:hover {
     position: relative;
     left: 100vw;
     grid-area: main;
-    background-color: rgb(43, 255, 0);
     transition: position;
     transition:left 0.2s linear;
 }
+
+
+/* =========================== PROJECTS ================================ */
+.main-content .projects {
+    width: 40%;
+    grid-area: main;
+    position: relative;
+    left: 100vw;
+    transition:left 0.1s linear;
+    justify-self: center;
+    margin-top: 30px;
+}
+
+.accordion {
+    background-color: var(--navigation-background);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+  }
+
+  .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 15px;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    color: white;
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: var(--accent-color);
+    color: rgb(48, 48, 48);
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    border: 1px solid var(--accent-color);
+    border-top: 0px;
+  }
+
+
+
+
 
 
 
