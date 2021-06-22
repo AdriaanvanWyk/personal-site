@@ -191,7 +191,7 @@ nav button:hover {
 }
 
 .linkedin-link {
-    margin-left: 250px;
+    margin-left: 230px;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -245,7 +245,7 @@ nav button:hover {
     }
 
     .linkedin-link {
-        padding-left: 0;      
+        margin-left: 0;      
     }
 
     .home .contact-info {
@@ -334,7 +334,12 @@ nav button:hover {
 
 
 
-
+@media screen and (max-width: 800px) {
+    
+    .main-content {
+        grid-template-columns: 0% 100% 0%;
+    }
+}
 
 
 
@@ -344,6 +349,14 @@ nav button:hover {
 }
 
 @media screen and (max-width: 700px) {
+    .main-content .projects {
+        width: 100%;
+        margin-top: 0px;
+    }
 
+    .main-content .projects h1 {
+        
+        text-align: center;
+    }
 
 }
