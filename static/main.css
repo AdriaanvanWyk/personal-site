@@ -147,7 +147,9 @@ nav button:hover {
 .main-content .home {
     height: 100%;
     grid-area: main;
+    justify-self: center;
     position: relative;
+    width: 80%;
     left: 100vw;
     transition:left 0.2s linear;
     display: grid;
@@ -162,6 +164,8 @@ nav button:hover {
 .home h1 {
     grid-area: name;
     font-size: 4.5rem;
+    border-bottom: 1px solid var(--main-font);
+    font-family: 'dubiel';
 }
 
 .home h2 {
@@ -179,8 +183,8 @@ nav button:hover {
 .home > img {
     grid-area: img;
     border-radius: 50%; 
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     padding: 20px;
 }
 
@@ -261,15 +265,23 @@ nav button:hover {
 
 
 
-
+/* ================= ABOUT ME ================= */
 
 .main-content .about-me {
     grid-area: main;
     position: relative;
     left: 100vw;
     transition:left 0.2s linear;
-
+    width: 60%;
+    justify-self: center;
+    margin-top: 30px;
 }
+
+.about-me p {
+    font-size: 1.1rem;
+}
+
+/* ================= SKILLS ================= */
 
 .main-content .skills {
     position: relative;
@@ -282,7 +294,7 @@ nav button:hover {
 
 /* =========================== PROJECTS ================================ */
 .main-content .projects {
-    width: 40%;
+    width: 50%;
     grid-area: main;
     position: relative;
     left: 100vw;
@@ -348,7 +360,7 @@ nav button:hover {
     left: 0 !important;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .main-content .projects {
         width: 100%;
         margin-top: 0px;
