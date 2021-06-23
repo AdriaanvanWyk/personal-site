@@ -20,7 +20,7 @@
 :root {
     --navigation-background: #353535;
     --main-page-background-color: rgba(255, 255, 255, 0.651);
-    --accent-color: #33cc80; 
+    --accent-color: #33cc80;
     --main-font: #3a3a3a;
     --active-link: #494949;
     --border-bottom-size: 5px;
@@ -29,21 +29,24 @@
 html {
     margin: 0;
     height: 100%;
+    width: 100%;
     font-family: "dayrom";
 }
 
 body {
     height: 100%;
+    width: 100vw;
     margin: 0;
 }
 
 .container {
-    
+
     height: 100%;
+    width: 100%;
     display: grid;
-    grid-template-areas:    
+    grid-template-areas:
                             'nav nav nav nav nav'
-                            'left-sidebar content content content right-sidebar';
+                            'content content content content content';
     grid-template-columns: repeat(5, 20%);
     grid-template-rows: 70px 1fr;
     margin: 0;
@@ -88,7 +91,7 @@ nav button {
 }
 
 @media screen and (max-width: 800px) {
-    
+
     nav img {
         height: 80%;
     }
@@ -104,11 +107,11 @@ nav button {
 
     .container {
 
-        grid-template-areas:    
+        grid-template-areas:
         'left-sidebar content content content right-sidebar'
         'nav nav nav nav nav';
         grid-template-columns: 0 repeat(3, 33.3%) 0;
-        grid-template-rows: 1fr 70px;
+        grid-template-rows: 1fr 60px;
     }
 }
 
@@ -127,7 +130,7 @@ nav button:hover {
 
 
 .main-content {
-    width: 100vw;
+    width: 100%;
     grid-area: content;
     height: 100%;
     overflow: hidden;
@@ -138,7 +141,7 @@ nav button:hover {
 }
 
 @media screen and (max-width: 800px) {
-    
+
     .main-content {
         grid-template-columns: 0% 100% 0%;
     }
@@ -151,7 +154,7 @@ nav button:hover {
     grid-area: main;
     justify-self: center;
     position: relative;
-    width: 80%;
+    width: 100%;
     left: 100vw;
     transition:left 0.2s linear;
     display: grid;
@@ -184,7 +187,7 @@ nav button:hover {
 
 .home > img {
     grid-area: img;
-    border-radius: 50%; 
+    border-radius: 50%;
     width: 400px;
     height: 400px;
     padding: 20px;
@@ -202,7 +205,7 @@ nav button:hover {
     align-items: center;
     text-decoration: none;
     color: var(--main-font);
-    
+
 }
 
 .email-info {
@@ -218,7 +221,7 @@ nav button:hover {
 }
 
 @media screen and (max-width: 800px) {
-    
+
     .main-content .home {
         grid-template-areas: "img img"
         "name name"
@@ -232,7 +235,7 @@ nav button:hover {
     }
 
     .home > img {
-        border-radius: 50%; 
+        border-radius: 50%;
         width: 180px;
         height: 180px;
         padding: 0;
@@ -241,7 +244,7 @@ nav button:hover {
     .home h1 {
         font-size: 2rem;
     }
-    
+
     .home h2 {
         font-size: 1rem;
     }
@@ -251,7 +254,7 @@ nav button:hover {
     }
 
     .linkedin-link {
-        margin-left: 0;      
+        margin-left: 0;
     }
 
     .home .contact-info {
@@ -290,16 +293,18 @@ nav button:hover {
 
     .main-content .about-me {
         width: 100vw;
-        padding: 20px;
+        padding: 0px;
         margin-top: 0px;
     }
 
     .about-me p {
         font-size: 1rem;
+        padding: 0 20px;
     }
 
     .about-me > h1 {
         text-align: center;
+        padding-bottom: 10px;
     }
 
 }
@@ -324,6 +329,7 @@ nav button:hover {
     transition:left 0.1s linear;
     justify-self: center;
     margin-top: 30px;
+    overflow-y: scroll;
 }
 
 .accordion {
@@ -345,18 +351,18 @@ nav button:hover {
     float: right;
     margin-left: 5px;
   }
-  
+
   .active:after {
     color: white;
     content: "\2796"; /* Unicode character for "minus" sign (-) */
   }
-  
+
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   .active, .accordion:hover {
     background-color: var(--accent-color);
     color: rgb(48, 48, 48);
   }
-  
+
   /* Style the accordion panel. Note: hidden by default */
   .panel {
     padding: 0 18px;
@@ -370,7 +376,7 @@ nav button:hover {
 
 
 @media screen and (max-width: 800px) {
-    
+
     .main-content {
         grid-template-columns: 0% 100% 0%;
     }
@@ -390,7 +396,7 @@ nav button:hover {
     }
 
     .main-content .projects h1 {
-        
+
         text-align: center;
     }
 
