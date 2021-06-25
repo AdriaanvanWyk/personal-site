@@ -284,13 +284,6 @@ nav button:hover {
     left: 100vw;
     transition:left 0.1s linear;
     justify-self: center;
-    overflow-y: scroll;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-
-.about-me::-webkit-scrollbar {
-  display: none;
 }
 
 .about-me p {
@@ -316,7 +309,6 @@ nav button:hover {
     justify-self: center;
     transition: position;
     transition:left 0.1s linear;
-    padding: 10px;
 }
 
 .skills-grid {
@@ -325,17 +317,20 @@ nav button:hover {
   grid-template-columns: 20% 30% 20% 30%;
   grid-auto-flow: row;
   margin: 0 auto;
+  grid-column-gap: 20px;
 }
 
 .skill-name {
   font-size: 1.5rem;
   padding: 5px;
+  padding-left: 0px;
   margin: 10px;
 }
 
 .rating {
   margin: auto 0;
   height: 30%;
+  margin-right: 30px;
 }
 
 .skill-rating-5 {
@@ -361,16 +356,21 @@ nav button:hover {
   width: 100%;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
+
+    .skills {
+        padding-right: 5px;
+    }
 
     .skills-grid {
-        grid-template-columns: 30% 70%;
+        grid-template-columns: 32% 68%;
+        text-align: left;
+        grid-column-gap: 0px;
     }
 
     .skill-name {
-      font-size: 1.5rem;
+      font-size: 1rem;
       padding: 5px;
-      margin: 10px auto;
     }
 }
 
@@ -446,10 +446,16 @@ nav button:hover {
 .dynamic-page {
   width: 50%;
   margin-top: 30px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.dynamic-page::-webkit-scrollbar {
+  display: none;
 }
 
 .dynamic-page h1 {
-
 }
 
 @media screen and (max-width: 800px) {
