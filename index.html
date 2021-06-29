@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This is my (Adriaan van Wyk) personal site. It has some of my background information, contact info, a list of projects I've done and a list of some of the skills I've acquired!">
-    <meta name="keywords" content="Software, Developer, Engineer, Computing, Python, HTML, CSS, Flask">
+    <meta name="keywords" content="Software Developer, Software Engineer, Developer, Engineer, Computing, Python, HTML, CSS, Flask, Bank of America, Adriaan van wyk">
     <meta name="author" content="Adriaan van Wyk">
 </head>
 
@@ -29,12 +29,15 @@
                     <button class="project-panel accordion">Personal Site</button>
                     <div class="panel">
                         <p>This site is 100% created from scratch using HTML, CSS3 (Grid, Felxbox etc.), and some Javascript.</p>
-                        <p>As this is just a static site I didn't fell the need to implement it using any fancy framework. Just some lightweight HTML, CSS and Javascript. &#128512</p>
-                        <p>It is being served from an Nginx instance running on a Digital Ocean Ubuntu droplet (With both Nginx and the Ubuntu VM being manually configured)</p>
-                        <p>The site is SSL/TLS enabled on the Nginx instance using Let'sEncrypt certs installed with CertBot. The cert is auto-renewed using a CronJob</p>
+                        <p>As this is just a static site I didn't feel the need to implement it using any fancy framework. Just some lightweight HTML, CSS and Javascript. &#128512</p>
+                        <p>It is being served from an Nginx instance running on a Digital Ocean Ubuntu droplet (With both Nginx and the Ubuntu VM being manually configured).</p>
+                        <p>
+                          The site is SSL/TLS enabled on the Nginx instance using Let'sEncrypt certs installed with CertBot. The cert is auto-renewed using a CronJob.
+                          HTTP/2 has been enabled and a server push is done for the static content and scripts when index.html is requested.
+                        </p>
                     </div>
 
-                    <p>Will add more projects as I get time!</p>
+                    <p>More projects coming soon!</p>
                     <!--
                     <button class="project-panel">Project 2</button>
                     <button class="project-panel">Project 3</button>
@@ -66,13 +69,13 @@
                 <div class="about-me dynamic-page">
                     <h1>About Me</h1>
                     <p>I'm Adriaan.</p>
-                    <p>I'm a software engineer living in Ireland currently working with Bank of America in the Global Risk Analytics team.</p>
+                    <p>I'm a Software Engineer living in Ireland currently working with Bank of America in the Global Risk Analytics team.</p>
                     <p>
                         I reached the world of computing/technology after meandering through the world of music and music production for a while.
-                        I've always had a massive interest in computing building my first PC when I was 15 and ever since then I've wanted to learn more and more about them.
+                        I've always had a great interest in computing building my first PC when I was 15 and ever since then I've wanted to learn more and more about computers.
                     </p>
                     <p>
-                        I initially went to college to study music production and, after doing some audio programming, I was hooked into the world of software and its capabilities.
+                        I initially went to college to study Music Production and, after doing some audio programming, I was hooked into the world of software and its capabilities.
                         So I strapped in for another few years of college, studying Software Development in I.T Carlow, Ireland. I haven't looked back since!
                     </p>
                     <p>
@@ -80,7 +83,7 @@
                         There, I had the pleasure of working with some of the smartest people I know.
                     </p>
                     <p>
-                        I graduated from college last year, rejoined Bank of America and I've learned new skills everyday since.
+                        I graduated from college last year, rejoined Bank of America and I've learned new skills every day since.
                     </p>
 
                 </div>
@@ -158,4 +161,4 @@
 
 </body>
 
-<script src="src/mainContentPanelChange.js"></script>
+<script src="src/personalSiteScripts.js"></script>
