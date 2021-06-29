@@ -196,7 +196,7 @@ nav button:hover {
     width: 280px;
     height: 280px;
     margin: 20px;
-    border: 5px solid #666666;
+    border: 3px solid var(--navigation-background);
 }
 
 .contact-info img {
