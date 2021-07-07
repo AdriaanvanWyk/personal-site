@@ -205,25 +205,20 @@ nav button:hover {
     margin-right: 15px;
 }
 
-.linkedin-link {
-    margin-left: 230px;
+.link-data {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: var(--main-font);
+    flex: 1;
 
 }
 
-.email-info {
-    display: flex;
-    align-items: center;
-}
 
 .home .contact-info {
     grid-area: contact;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
     padding: 20px;
 }
 
@@ -243,8 +238,8 @@ nav button:hover {
 
     .home > img {
         border-radius: 50%;
-        width: 180px;
-        height: 180px;
+        width: 160px;
+        height: 160px;
         padding: 0;
     }
 
@@ -266,6 +261,7 @@ nav button:hover {
 
     .home .contact-info {
         flex-direction: column;
+        padding: 0px 20px;
     }
 
     .home .contact-info img {
